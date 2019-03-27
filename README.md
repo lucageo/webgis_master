@@ -1,5 +1,3 @@
-# Master in GIScience e droni per la gestione del territorio - WEBGIS Lesson
-
 
 ### Install tomcat on ubuntu:
 
