@@ -44,11 +44,6 @@ Save by pressing 'ESC' and write:
 ```
 - [x] Reboot the machine
 
-
-
-
-
-
 ### Connect Postgis with GeoServer
 
 Make sure you have a Postgis extension on your DB, if you don't, please run the following commands using pgAdmin:
@@ -72,24 +67,35 @@ password: yourname
 ```
 and publish the protected_areas layer.
 
-- Layer Name: protected_areas
-- Layer Title: protected_areas
-- Native SRS: 4326
-- Declared SRS: 4326
-
-- Apply the style [protected_areas](https://github.com/lucageo/foss4g/blob/master/protected_areas_style.xml)
-
-And Save.
-
-
-### CreateGeoServer styles
+### Create GeoServer styles
 
 Set up two styles:
 
-1) Provinces population 2015 - [xml](https://github.com/lucageo/foss4g/blob/master/protected_areas_style.xml) (Simple green polygon)
+1) Provinces population 2015 - [xml](https://github.com/lucageo/mastergis/tree/master/styles) (Gradient based on the population 2015)
 
-2) Provinces population 2015 Selection - [xml](https://github.com/lucageo/foss4g/blob/master/protected_areas_select.xml) (White Line)
+2) Provinces population 2015 Selection - [xml](https://github.com/lucageo/mastergis/tree/master/styles) (White Line)
 
+### Pubblish GeoServer layer
+
+- Layer Name: CMprov2016_WGS84_2
+- Layer Title: CMprov2016_WGS84_2
+- Native SRS: EPSG:32632 UTM zone 32N
+- Declared SRS: EPSG:32632 UTM zone 32N
+
+- Apply the style [Provinces population 2015 Selection](https://github.com/lucageo/mastergis/tree/master/styles)
+
+- Save.
+
+## Web Mapping application development
+
+- [ ] Create a folder called "Master"
+- [ ] Create a sub folder called "css"
+- [ ] Populate "css" with [these](https://github.com/lucageo/mastergis/tree/master/css) 
+- [ ] Create a sub folder called "libraries"
+- [ ] Populate "libraries" with [these](https://github.com/lucageo/mastergis/tree/master/libraries)
+------
+- [ ] Create a file called "index.html"
+- [ ] Create a file called "stats.js"
 
 ### Copy the following script and paste it in index.html
 Create index.html file importing all the libraries and creating a the div "map"
@@ -97,8 +103,8 @@ Create index.html file importing all the libraries and creating a the div "map"
 <!DOCTYPE HTML>
 <html>
   <head>
-   <meta charset="utf-8" />
-    <title>FOSS4G DAR ES SALAAM - CONSERVATION TOOLS</title>
+    <meta charset="utf-8" />
+    <title>Master in GIScience e droni per la gestione del territorio</title>
 
 		<!-- include leaflet css and javascript -->
 		    <link rel="stylesheet" href="css/leaflet.css" />
