@@ -90,9 +90,9 @@ Set up two styles:
 
 - [ ] Create a folder called "Master"
 - [ ] Create a sub folder called "css"
-- [ ] Populate "css" with [these](https://github.com/lucageo/mastergis/tree/master/css) 
+- [ ] Populate "css" with [these](https://github.com/lucageo/mastergis/tree/master/css) files
 - [ ] Create a sub folder called "libraries"
-- [ ] Populate "libraries" with [these](https://github.com/lucageo/mastergis/tree/master/libraries)
+- [ ] Populate "libraries" with [these](https://github.com/lucageo/mastergis/tree/master/libraries) files
 ------
 - [ ] Create a file called "index.html"
 - [ ] Create a file called "stats.js"
