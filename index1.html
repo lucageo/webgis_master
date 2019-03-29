@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+		<meta charset="utf-8" />
+    <title>Master in GIScience e droni per la gestione del territorio</title>
+
+		<!-- include leaflet css and javascript -->
+
+		<script src="libraries/leaflet-src.js"></script>
+    <script src="libraries/jquery.js"></script>
+    <script src="libraries/highcharts.js"></script>
+    <script src="libraries/highcharts_more.js"></script>
+    <script src="libraries/bootstrap-slider.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="libraries/leaflet-sidebar.js"></script>
+		<!-- include our own css -->
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/leaflet-sidebar.css" />
+		<link rel="stylesheet" href="css/leaflet-example.css" />
+    <link rel="stylesheet" href="css/bootstrap-slider.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<!-- we include the javascript at the bottom, see below -->
+	</head>
+
+	<body>
+		<div id= 'banner'>
+      <h1>Master in GIScience e droni per la gestione del territorio</h1>
+      <hr>
+	    <p> Example of a web application using the data produced, integrating various technologies including Postgres, GeoServer, LeafletJs and custom Javascripts.</p>
+    </div>
+    <div id="sidebar" class="leaflet-sidebar collapsed">
+            <!-- nav tabs -->
+            <div class="leaflet-sidebar-tabs">
+                <!-- top aligned tabs -->
+                <ul role="tablist">
+                    <li><a href="#legend" role="tab"><i class="fa fa-bars active"></i></a></li>
+                </ul>
+            </div>
+            <!-- panel content -->
+            <div class="leaflet-sidebar-content">
+                <div class="leaflet-sidebar-pane" id="legend">
+                    <h1 class="leaflet-sidebar-header">Legend<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                    <p class="legend_text">Inhabitants in 2015</p>
+                      <div class="c-legend-content">
+                       <ul class="c-legend-choropleth">
+                          <li><div class="icon-choropleth" style="background-color: #ffffb2!important;  "></div><span class="name"><i>50,000 - 150,000</i></span></li>
+                          <li><div class="icon-choropleth" style="background-color: #ffe98c!important;  "></div><span class="name"><i>150,000 - 200,000</i></span></li>
+                          <li><div class="icon-choropleth" style="background-color: #ffd265!important;  "></div><span class="name"><i>200,000 - 250,000</i></span></li>
+                          <li><div class="icon-choropleth" style="background-color: #feb751!important;  "></div><span class="name"><i>250,000 - 300,000</i></span></li>
+                          <li><div class="icon-choropleth" style="background-color: #fe9b43!important;  "></div><span class="name"><i>300,000 - 350,000</i></span></li>
+                          <li><div class="icon-choropleth" style="background-color: #fb7b35!important;  "></div><span class="name"><i>350,000 - 400,000</i></span></li>
+                          <li><div class="icon-choropleth" style="background-color: #f55629!important;  "></div><span class="name"><i>400,000 - 500,000</i></span></li>
+                          <li><div class="icon-choropleth" style="background-color: #eb3420!important;  "></div><span class="name"><i>500,000 - 750,000</i></span></li>
+                          <li><div class="icon-choropleth" style="background-color: #d41a23!important;  "></div><span class="name"><i>750,000 - 1,000,000</i></span></li>
+                          <li><div class="icon-choropleth" style="background-color: #90001f!important;  "></div><span class="name"><i>More than 1,000,000</i></span></li>
+                        </ul>
+                      </div>
+                      <div id="transparency_slider_pop_main">
+                      <div>
+                         <input type="text" value="100" id="slider_pop" data-slider-min="0" data-slider-max="100" data-slider-step="5" data-slider-value="80">
+                      </div>
+                  </div>
+                </div>
+        </div>
+      </div>
+		<div id="map"></div>
+		<!-- include our own javascript -->
+		<script src="stats.js"></script>
+
+	</body>
+</html>
