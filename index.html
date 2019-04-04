@@ -1,25 +1,49 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta charset="utf-8" />
+		<meta charset="utf-8" />
     <title>Master in GIScience e droni per la gestione del territorio</title>
-    <!-- include leaflet css and javascript -->
+		<!-- include leaflet css and javascript -->
     <script src="libraries/jquery.js"></script>
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <!-- include our own css -->
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"/>
-    <link rel="stylesheet" href="../css/custom.css" />
+
+		<!-- include our own css -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/custom.css" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
-    <!-- we include the javascript at the bottom, see below -->
-   </head>
-   <body>
-   <div id= 'banner'>
-      <h1>Master in GIScience e droni per la gestione del territorio</h1>
+		<!-- we include the javascript at the bottom, see below -->
+	</head>
+	<body>
+    
+    <!--Navbar -->
+    <nav>
+      <!-- https://material.io/tools/color/#!/?view.left=0&view.right=0 -->
+      <div class="nav-wrapper blue-grey lighten-1">
+        <a href="" class="brand-logo"><img src="https://upload.wikimedia.org/wikipedia/it/e/ee/Logo_Universit%C3%A0_Padova.png"        height="40px" width = "40px" style="margin-left: 30px; margin-top: 10px;" /></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--/.Navbar -->
+    
+    <!-- banner -->
+		<div id= 'banner' style="">
+      <h3>Master in GIScience e droni per la gestione del territorio</h3>
       <hr>
-    <p> Example of a web mapping application</p>
+	    <p>Example of a web mapping application</p>
     </div>
-    <div id="map"></div>
-    <!-- include our own javascript -->
-   </body>
+    <!-- end banner -->
+    
+    <!-- map -->
+		<div id="map"></div>
+    <!-- end map -->
+    
+		<!-- include our own javascript -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	</body>
 </html>
