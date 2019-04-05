@@ -13,7 +13,7 @@ Copy the file geoserver.war to the directory that contains your container applic
 ```
 /var/lib/tomcat8
 ```
-Restart Tomcat.
+Start Tomcat.
 ```
 sudo systemctl start tomcat
 ```
@@ -23,7 +23,7 @@ Your container application should unpack the web archive and automatically set u
 
 Go to:
 ```
-cd /usr/local/lib/geoserver-2.10.4/webapps/geoserver/WEB-INF
+cd /opt/tomcat/webapps/geoserver/WEB-INF
 ```
 Open with VIM the following file:
 ```
@@ -40,8 +40,10 @@ Save by pressing 'ESC' and write:
 ```
 :wq!
 ```
-- [x] Reboot the machine
-
+Restart Tomcat.
+```
+sudo systemctl restart tomcat
+```
 ### Connect Postgis with GeoServer
 
 Make sure you have a Postgis extension on your DB, if you don't, please run the following commands using pgAdmin:
