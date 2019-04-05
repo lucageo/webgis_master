@@ -75,22 +75,11 @@ Set up two styles:
 
 ### Pubblish GeoServer layer
 
-- Layer Name: CMprov2016_WGS84_2
-- Layer Title: CMprov2016_WGS84_2
+- Layer Name: province
+- Layer Title: province
 - Native SRS: EPSG:32632 UTM zone 32N
 - Declared SRS: EPSG:32632 UTM zone 32N
 
 - Apply the style [Provinces population 2015 Selection](https://github.com/lucageo/mastergis/tree/master/styles)
 
 - Save.
-
-## Web Mapping application development
-
-- [ ] Create a folder called "Master"
-- [ ] Create a sub folder called "css"
-- [ ] Populate "css" with [these](https://github.com/lucageo/mastergis/tree/master/css) files
-- [ ] Create a sub folder called "libraries"
-- [ ] Populate "libraries" with [these](https://github.com/lucageo/mastergis/tree/master/libraries) files
-------
-- [ ] Create a file called "index.html"
-- [ ] Create a file called "stats.js"
