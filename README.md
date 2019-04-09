@@ -44,6 +44,14 @@ Restart Tomcat.
 ```
 sudo systemctl restart tomcat
 ```
+### Data dowload
+Italian provinces
+https://drive.google.com/drive/folders/1XKjYK-b3QYBm9mScqzayIX_r0gvWMji6?usp=sharing
+
+GHSL
+https://drive.google.com/drive/folders/1vN_DSKxd5H0B0hWWCzUqxUwJqBZXut4x?usp=sharing
+
+
 ### Connect Postgis with GeoServer
 
 Make sure you have a Postgis extension on your DB, if you don't, please run the following commands using pgAdmin:
@@ -85,3 +93,7 @@ Set up two styles:
 - Apply the style [Provinces population 2015 Selection](https://github.com/lucageo/mastergis/tree/master/styles)
 
 - Save.
+
+
+
+
