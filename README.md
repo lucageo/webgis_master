@@ -1,3 +1,6 @@
+### Slides 
+
+[Link](https://docs.google.com/presentation/d/1IcCalyJcjAfG3pkh1sBhREeGLljsGGWYUgAY5Iltets/edit#slide=id.p1)
 
 ### Install tomcat on ubuntu:
 
