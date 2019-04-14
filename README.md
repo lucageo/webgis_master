@@ -1,28 +1,3 @@
-
-313,279.25            
-3,933,682.75        
-1,312,016.25       
-5,220,292.5
-
-
-
-35.21691200238195
-
-6.538878497791056
-
-
-47.13582349140287
-
-19.61373975624665
-
-
-
-
-
-### Slides 
-
-[Link](https://docs.google.com/presentation/d/1IcCalyJcjAfG3pkh1sBhREeGLljsGGWYUgAY5Iltets/edit#slide=id.p1)
-
 ### Install tomcat on ubuntu:
 
 [How To Install Apache Tomcat 8 on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04)
