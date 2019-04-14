@@ -1,7 +1,13 @@
 
-313,279.25            3,933,682.75         1,312,016.25        5,220,292.5
+313,279.25            
+3,933,682.75        
+1,312,016.25       
+5,220,292.5
 
 
+
+
+6.538878497791056
 ### Slides 
 
 [Link](https://docs.google.com/presentation/d/1IcCalyJcjAfG3pkh1sBhREeGLljsGGWYUgAY5Iltets/edit#slide=id.p1)
