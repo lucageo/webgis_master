@@ -8,6 +8,13 @@
 
 
 6.538878497791056
+35.21691200238195
+19.61373975624665
+47.13582349140287
+
+
+
+
 ### Slides 
 
 [Link](https://docs.google.com/presentation/d/1IcCalyJcjAfG3pkh1sBhREeGLljsGGWYUgAY5Iltets/edit#slide=id.p1)
