@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--Import leaflet jquery and slide bar-->
+    <script src="libraries/leaflet-src.js"></script>
+    <script src="libraries/jquery.js"></script>
+    <script src="libraries/leaflet-sidebar.js"></script>
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="css/bootstrap-slider.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/leaflet-sidebar.css" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Master</title>
+  </head>
+
+
+  <body>
+    <!-- nav bar -->
+      <nav>
+        <!-- https://material.io/tools/color/#!/?view.left=0&view.right=0 -->
+        <div class="nav-wrapper blue-grey lighten-1">
+          <a href="" class="brand-logo"><img src="https://upload.wikimedia.org/wikipedia/it/e/ee/Logo_Universit%C3%A0_Padova.png" height="40px" width = "40px" style="margin-left: 30px; margin-top: 10px;" /></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    <!-- end nav bar -->
+    <!-- banner -->
+      <div id= 'banner'>
+        <h3>Master in GIScience e droni per la gestione del territorio</h3>
+        <hr>
+        <p> Example of a web application using the data produced, integrating various technologies including Postgres, GeoServer, LeafletJs and custom Javascripts.</p>
+      </div>
+      <!-- end banner -->
+        <!-- div map -->
+	      <div id="map"></div>
+        <!-- end of map -->
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script>
+  $(".button-collapse").sideNav();
+  </script>
+  <!-- include our own javascript -->
+  <script src="stats.js"></script>
+
+      <script src="libraries/bootstrap-slider.js"></script>
+      <script src="libraries/highcharts.js"></script>
+      <script src="libraries/highcharts_more.js"></script>
+</html>
