@@ -1,4 +1,3 @@
-
 //Initialise map
 //-------------------------------------------------------------------------------------------------------------
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio (if youhave to work wit canvas)
@@ -10,6 +9,28 @@ var tile_size = 512;
 // zoom to italy (lat,lon, zoom)
 var map = L.map('map', {
 }).setView([42, 10], 6);
+
+var sidebar = L.control.sidebar({container: 'sidebar'}).addTo(map);
+// open legend after a second!
+setTimeout(function(){
+sidebar.open('legend')
+}, 1000);
+
+sidebar.addPanel({
+       id:   'population_trend',
+       tab:  '<i class="fa fa-cogs"></i>',
+       title: 'Residential population (1975-2015)',
+       pane: '<p class="chart_text"></p>\
+      <div id="chart_population"></div>',
+   })
+
+sidebar.addPanel({
+      id:   'population_density',
+      tab:  '<i class="fa fa-signal"></i>',
+      title: 'Population density (1975-2015)',
+      pane: '<p class="chart_text"></p>\
+     <div id="chart_population_density"></div>',
+  })
 
 
 // Define basemaps
@@ -45,6 +66,22 @@ var provinces_selected=L.tileLayer.wms(url_region, {
     zIndex: 44
  }).addTo(map);
 provinces_selected.setParams({CQL_FILTER:"sigla LIKE ''"});
+
+
+// opacity slider
+var sliderVal;
+$(function () {
+    $('#slider_pop').bootstrapSlider().on('slide', function (ev) {
+    sliderVal = ev.value;
+    provinces.setOpacity(sliderVal/100);
+    });
+    if (sliderVal) {
+    $('#slider_pop').bootstrapSlider('setValue', sliderVal);
+    }
+});
+function rangeSlider(sliderVal) {
+    provinces.setOpacity(sliderVal)
+}
 
 
 // on click function
@@ -116,11 +153,111 @@ return layer._url + L.Util.getParamString(params, layer._url, true);
 
 function select_region(info,latlng){
 var den_cmpro=info['den_cmpro'];
+var sigla=info['sigla'];
+var pop1975_su=info['pop1975_su'];
+var pop1990_su=info['pop1990_su'];
+var pop2000_su=info['pop2000_su'];
+var pop2015_su=info['pop2015_su'];
+var pop1975_de=info['pop1975_de'];
+var pop1990_de=info['pop1990_de'];
+var pop2000_de=info['pop2000_de'];
+var pop2015_de=info['pop2015_de'];
+
 var popupContent = '<center><h5>'+den_cmpro+'</h5></center>';
 var popup = L.popup()
 .setLatLng([latlng.lat, latlng.lng])
 .setContent(popupContent)
 .openOn(map);
+
+// open sidebar
+$("#chart_population").show();
+sidebar.open('population_trend');
+
+map.on('popupclose', function (){
+sidebar.close();
+});
+
+
+$('#chart_population').highcharts({
+  chart: {
+  type:'column',
+   height: 300,
+  backgroundColor:'rgba(255, 255, 255, 0)',
+  legend: {enabled: false}
+  },
+  title: {text: null},
+  subtitle: {text: null},
+  credits: {
+      enabled: false,
+  },
+   xAxis: {
+     categories: [den_cmpro]
+  },
+  yAxis: {
+        title: { text: null },
+        labels: {overflow: 'justify'}
+  },
+  series:[{
+           name: '1975',
+           color: '#4e6269',
+           data: [parseInt(pop1975_su)]
+         },{
+           name: '1990',
+           color: '#8f9da2',
+           data: [parseInt(pop1990_su)]
+         },{
+           name: '2000',
+           color: '#bbc9ce',
+           data: [parseInt(pop2000_su)]
+         },{
+           name: '2015',
+           color: '#d9e4e8',
+           data: [parseInt(pop2015_su)]
+         }
+       ]
+});
+
+$('#chart_population_density').highcharts({
+  chart: {
+  type:'column',
+   height: 300,
+  backgroundColor:'rgba(255, 255, 255, 0)',
+  legend: {enabled: false}
+  },
+  title: {text: null},
+  subtitle: {text: null},
+  credits: {
+      enabled: false,
+  },
+   xAxis: {
+     categories: [den_cmpro]
+  },
+  yAxis: {
+        title: { text: null },
+        labels: {overflow: 'justify'}
+  },
+  series:[{
+           name: '1975',
+           color: '#4e6269',
+           data: [parseInt(pop1975_de)]
+         },{
+           name: '1990',
+           color: '#8f9da2',
+           data: [parseInt(pop1990_de)]
+         },{
+           name: '2000',
+           color: '#bbc9ce',
+           data: [parseInt(pop2000_de)]
+         },{
+           name: '2015',
+           color: '#d9e4e8',
+           data: [parseInt(pop2015_de)]
+         }
+       ]
+});
+
+
+
 }
 
 
