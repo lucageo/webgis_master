@@ -78,9 +78,9 @@ and publish the protected_areas layer.
 
 Set up two styles:
 
-1) Provinces population 2015 - [xml](https://github.com/lucageo/mastergis/tree/master/styles) (Gradient based on the population 2015)
+1) Provinces population 2015 (Gradient based on the population 2015)
 
-2) Provinces population 2015 Selection - [xml](https://github.com/lucageo/mastergis/tree/master/styles) (White Line)
+2) Provinces population 2015 Selection (Yellow Line)
 
 ### Pubblish GeoServer layer
 
@@ -89,7 +89,7 @@ Set up two styles:
 - Native SRS: EPSG:32632 UTM zone 32N
 - Declared SRS: EPSG:32632 UTM zone 32N
 
-- Apply the style [Provinces population 2015 Selection](https://github.com/lucageo/mastergis/tree/master/styles)
+- Apply the style Provinces population 2015 Selection
 
 - Save.
 
