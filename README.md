@@ -1,10 +1,3 @@
-
-##legend
-http://62.77.154.246:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&STRICT=false&style=footprint_1993
-
-##layer
-http://62.77.154.246:8080/geoserver/mastergis/wms?service=WMS&version=1.1.0&request=GetMap&layers=mastergis%3Afootprint_com&bbox=313279.25%2C3933682.75%2C1312016.25%2C5220292.5&width=596&height=768&srs=EPSG%3A32632&format=application/openlayers
-
 ### Install tomcat on ubuntu:
 
 [How To Install Apache Tomcat 8 on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04)
