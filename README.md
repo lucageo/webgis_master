@@ -43,13 +43,10 @@ Restart Tomcat.
 ```
 sudo systemctl restart tomcat
 ```
-### Data dowload
+### Data 
 Italian provinces
-https://drive.google.com/drive/folders/1XKjYK-b3QYBm9mScqzayIX_r0gvWMji6?usp=sharing
 
 GHSL
-https://drive.google.com/drive/folders/1vN_DSKxd5H0B0hWWCzUqxUwJqBZXut4x?usp=sharing
-
 
 ### Connect Postgis with GeoServer
 
